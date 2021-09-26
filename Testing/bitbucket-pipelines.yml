@@ -1,0 +1,38 @@
+#  Template NodeJS build
+#  This pipeline is built on. NodeJS code base.
+#  The workflow allows smoke tests to be executed manully.
+#  The workflow allows integrtion tests to be executed manully.
+
+image: node:10.15.3
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Install Postman
+            script:
+              - npm install --save -g postman
+              - npm install --save -g newman
+              - npm install --save -g jq
+              - npm install -g newman-run
+              - apt-get install curl
+              - npm install -g wiremock
+              - mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+              - npm install --save npm-git-install
+            caches:
+              - node
+        - step:
+            name: Create folders
+            script:
+              - mkdir collection-files
+              - mkdir environment-files
+              - mkdir results-files
+              - mkdir certificates-files
+            caches:
+              - node
+        - step: ## This step will require manuel trigger to run smoke tests for ISS
+            name: Manual step
+            trigger: manual
+            script:
+              - echo "This step runs once you click the 'Run' button"
+        - step: ## This step will require manuel trigger to run smoke tests for ISS
