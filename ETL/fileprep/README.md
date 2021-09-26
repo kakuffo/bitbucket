@@ -26,7 +26,7 @@ television sets, routers, printers, audio equipment, mobile phones, tablets, set
 transfer engine for thousands of software applications in over ten billion installations. curl is used daily by virtually 
 every Internet-using human on the globe.
 
-* **URL** -  https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+* **URL** -  https://github.com/Homebrew/brew/tarball/master
 
 
 ### **jq**
@@ -39,13 +39,38 @@ scp it to a far away machine of the same type, and expect it to work.
 * **URL** -  https://stedolan.github.io/jq/
 
 
-### csvtojson  ## https://www.npmjs.com/package/csvtojson
+### **csvtojson** 
+csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. It can be used as node.js library / command line tool / or in browser. Below are some features:
+
+* Strictly follow CSV definition RF4180
+* Work with millions of lines of CSV data
+* Provide comprehensive parsing parameters
+* Provide out of box CSV parsing tool for Command Line
+* Blazing fast -- Focus on performance
+* Give flexibility to developer with 'pre-defined' helpers
+* Allow async / streaming parsing
+* Provide a csv parser for both Node.JS and browsers
+* Easy to use API
 
 
 
-### convert-csv-to-json --save ## https://www.npmjs.com/package/convert-csv-to-json
+* **URL** -   https://www.npmjs.com/package/csvtojson
+
+
+
+### **convert-csv-to-json**
+
+
+* From CSV File to JSON Array
+* From CSV String to CSV Row
+* Asynchronously process each line from csv url  
+* Convert to CSV lines
+* Use Stream
+
+* **URL** -   https://www.npmjs.com/package/convert-csv-to-json
 
 
 
 
-### npm-git-install
+
+### **npm-git-install**
