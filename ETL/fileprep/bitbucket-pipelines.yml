@@ -2,6 +2,7 @@
 #  This pipeline is built on. NodeJS code base.
 #  The workflow allows smoke tests to be executed manully.
 #  The workflow allows integrtion tests to be executed manully.
+# https://ashcroft.dev/blog/modifying-csv-files-node-js/
 
 image: node:10.15.3
 
@@ -13,6 +14,8 @@ pipelines:
             script:
               - npm install csv-tools ## https://www.npmjs.com/package/csv-tools
               - mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+              - npm install --save -g jq
+              - npm install convert-csv-to-json --save ## https://www.npmjs.com/package/convert-csv-to-json
               - npm install --save npm-git-install
             caches:
               - node
