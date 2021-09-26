@@ -15,7 +15,9 @@ pipelines:
               - npm install csv-tools ## https://www.npmjs.com/package/csv-tools
               - mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
               - npm install --save -g jq
+              - npm i --save csvtojson  ## https://www.npmjs.com/package/csvtojson
               - npm install convert-csv-to-json --save ## https://www.npmjs.com/package/convert-csv-to-json
               - npm install --save npm-git-install
+              - npm install curl ## https://www.npmjs.com/package/curl
             caches:
               - node
